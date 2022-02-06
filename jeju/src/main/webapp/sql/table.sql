@@ -24,3 +24,35 @@ create table juser_detail( /* 회원정보 테이블 */
 );
 
 create sequence juser_seq;
+
+/* 추천 장소 테이블 */
+create table jboard_spot(
+  board_spot_num number not null,
+  title varchar2(150) not null,
+  content clob not null,
+  hit number(5) default 0 not null,
+  reg_date date default sysdate not null,
+  modify_date date,
+  filename varchar2(150),
+  ip varchar2(40) not null,
+  user_num number not null,
+  constraint jboard_spot_pk primary key (board_spot_num),
+  constraint jboard_spot_fk foreign key (user_num) references juser (user_num)
+);
+
+create sequence jboard_spot_seq;
+
+create table jboard_spot_comment(
+  spot_comment_num number not null,
+  board_spot_num number not null,
+  content varchar2(300) not null,
+  reg_date date default sysdate not null,
+  modify_date date,
+  user_num number not null,
+  constraint spot_comment_num_pk primary key (spot_comment_num),
+  constraint board_spot_num_fk foreign key (board_spot_num) references jboard_spot (board_num),
+  constraint jboard_spot_comment_fk foreign key (user_num) references juser (user_num)
+);
+
+
+create sequence jboard_spot_comment_seq;
