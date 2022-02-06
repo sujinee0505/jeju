@@ -1,7 +1,7 @@
 create table juser(
     user_num number(10) not null,
     id varchar2(12) not null,
-    auth number(1) default 2 not null, /*회원등급:0탈퇴회원,1정지회원,2일반회원,3관리자*/
+    auth number(10) not null,
     constraint juser_pk primary key(user_num)
 );
 

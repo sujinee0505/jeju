@@ -33,7 +33,7 @@ create table jboard_spot_comment(
   modify_date date,
   user_num number not null,
   constraint spot_comment_num_pk primary key (spot_comment_num),
- constraint board_spot_num_fk foreign key (board_spot_num) references jboard_spot (board_num),
+  constraint board_spot_num_fk foreign key (board_spot_num) references jboard_spot (board_spot_num),
   constraint jboard_spot_comment_fk foreign key (user_num) references juser (user_num)
 );
 

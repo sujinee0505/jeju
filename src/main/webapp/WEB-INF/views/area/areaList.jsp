@@ -59,7 +59,7 @@
 
 				</div>
 				<div align="right">
-					<a href="areaWirteForm.do">등록</a> <a href="areaDeleteForm">삭제</a>
+					<a href="areaDetail.do?board_spot_num=${area.board_spot_num}">등록</a> <a href="areaDetail.do?board_spot_num=${area.board_spot_num}">삭제</a>
 				</div>
 			</div>
 
