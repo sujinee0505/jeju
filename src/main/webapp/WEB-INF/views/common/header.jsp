@@ -24,7 +24,8 @@
 		<a href="${pageContext.request.contextPath}/member/logout.do" class="btn btn-outline ">로그아웃</a>
 					</c:if>
 					<c:if test="${empty user_num}">
-						<a href="${pageContext.request.contextPath}/member/login.do" class="btn btn-outline ">로그인</a>
+						<a href="${pageContext.request.contextPath}/user/registerUserForm.do" class="btn btn-outline ">회원가입</a>
+						<a href="${pageContext.request.contextPath}/user/loginForm.do" class="btn btn-outline ">로그인</a>
 					</c:if>
 					<c:if test="${!empty user_num && user_auth == 2}">
 						<a href="${pageContext.request.contextPath}/member/myPage.do" class="btn btn-outline ">MY페이지</a>
