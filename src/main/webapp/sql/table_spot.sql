@@ -1,5 +1,5 @@
 
-/* 추천 장소 테이블 */
+/* 추천 장소 테이블*/
 create table jboard_spot(
   board_spot_num number not null,
   title varchar2(150) not null,
